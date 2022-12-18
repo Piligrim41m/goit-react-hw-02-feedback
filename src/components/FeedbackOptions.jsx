@@ -1,5 +1,5 @@
 import React from "react";
-
+import PropTypes from 'prop-types';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
     const onButtonClick = evt => {
@@ -21,4 +21,9 @@ const FeedbackOptions = ({ options, onLeaveFeedback }) => {
         </div>
     )
 }
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func.isRequired,
+  options: PropTypes.arrayOf(PropTypes.string.isRequired),
+};
 export default FeedbackOptions
